@@ -1,17 +1,31 @@
+import React, { PureComponent } from 'react'
+
 export function Name(props) {
     console.log('rendered')
 const div = <span>abc</span> 
 return div
 }
 
-function Text(props) {
-    
- 
+export default class Text extends PureComponent {
+    componentDidMount(){
+        console.log('tekstas mounted')
+    }
+    componentDidUpdate(){
+        console.log('tekstas updated')
+    }
+    componentWillUnmount(){
+        console.log('tekstas unmounting')
+    }
 
-  return (
-     
-    <p className={props.className}>Tekstas {props.children} </p>
-  );
+    // shouldComponentUpdate(nextProps){
+    //     // {} !== {} Json formate stringas
+    //     return JSON.stringify(nextProps) !== JSON.stringify(this.props)
+    // }
+
+    render() {
+        return (
+            <p className={this.props.className}>Tekstas {this.props.children} </p>
+        )
+    }
 }
 
-export default Text;
