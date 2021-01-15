@@ -1,25 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import Text, { Name } from './Text'
+import vars from './variables';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+
+export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      backgroundColor: 'white'
+    }
+  }
+
+  render() {
+    console.log('rendered')
+    return (
+      <div style={{
+        height: '100vh',
+        width: '100vw',
+        backgroundColor: this.state.backgroundColor
+      }}>
+        <button onClick={()=> {
+          this.setState({
+            backgroundColor: 'blue'
+          })
+          setTimeout(()=>this.setState(state => {
+            console.log(state.backgroundColor)
+            return {
+            backgroundColor: 'green'
+          }
+          }), 2000)
+          }}>PAKEISTI SPALVA</button>
+      </div>
+    )
+  }
 }
-
-export default App;
