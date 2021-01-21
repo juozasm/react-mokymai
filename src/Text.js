@@ -1,31 +1,12 @@
-import React, { PureComponent } from 'react'
+import React, { useState } from 'react'
 
-export function Name(props) {
-    console.log('rendered')
-const div = <span>abc</span> 
-return div
+export default function Text({ onClick  }) {
+    const [inputVal, setInputVal] = useState('')
+    return (
+        <div>
+            TEKSTAS
+            <input onChange={(e)=>setInputVal(e.target.value)} value={inputVal} type="number" />
+            <button onClick={()=>onClick(Number(inputVal))}>change vh</button>
+        </div>
+    )
 }
-
-export default class Text extends PureComponent {
-    componentDidMount(){
-        console.log('tekstas mounted')
-    }
-    componentDidUpdate(){
-        console.log('tekstas updated')
-    }
-    componentWillUnmount(){
-        console.log('tekstas unmounting')
-    }
-
-    // shouldComponentUpdate(nextProps){
-    //     // {} !== {} Json formate stringas
-    //     return JSON.stringify(nextProps) !== JSON.stringify(this.props)
-    // }
-
-    render() {
-        return (
-            <p className={this.props.className}>Tekstas {this.props.children} </p>
-        )
-    }
-}
-
