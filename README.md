@@ -1,5 +1,11 @@
 # React Programa
 
+## TOOLS:
+- [https://nodejs.org/en/](NODE JS)
+- [https://code.visualstudio.com/](VSCode) 
+- [https://codesandbox.io/](Code Sandbox)
+- [https://reactjs.org/docs/create-a-new-react-app.html](CRA - Create React App)
+
 ## 2021 01 15
 
 - Supažindinimas su React 
