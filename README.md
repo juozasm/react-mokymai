@@ -37,6 +37,8 @@ Custom hooks pvz.: https://usehooks.com/
 - Aplikacijos - DONT OVERTHINK - https://reactjs.org/docs/faq-structure.html 
 // papildomi patternas -> Atomic design https://github.com/danilowoz/react-atomic-design pagal: https://bradfrost.com/blog/post/atomic-web-design/
 
+- [COUNTDOWN - setInterval - useEffect example](https://github.com/juozasm/react-mokymai/blob/master/Countdown.js)
+
 **Skaldyti skaldyti ir dar karta skaldyti!**
 
 https://reactjs.org/docs/thinking-in-react.html
