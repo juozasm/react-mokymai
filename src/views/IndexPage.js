@@ -6,7 +6,7 @@ export default function IndexPage() {
     const [isError, setIsError] = useState(false)
 
     console.log('test')
-    if(isError) throw(new Error('Ne kazka')) Uncommet for error
+    if(isError) throw(new Error('Ne kazka')) 
 
     return (
         <div>
