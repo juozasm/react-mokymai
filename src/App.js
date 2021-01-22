@@ -1,60 +1,46 @@
-import React, { useCallback, useMemo, useState, useEffect } from "react";
+import React, { useState } from "react";
+import usePassword from "./usePassword";
 
-function Comp({ isShown, inputVal }) {
-  const [isInnerShown, setIsInnerShown] = useState(isShown /* constructor */);
-
-  const error = useCallback(function() {
-    console.error('ERROR!!!', { isInnerShown })
-  }, [isInnerShown])
-
-  const arr = useMemo(()=>{
-    console.log('compute')
-    return [inputVal, { isShown }]
-  }, [inputVal, isShown])
-
-  useEffect(() => {
-    console.log('effect1')
-    setIsInnerShown(isShown);
-  }, [isShown]);
-
-  useEffect(() => {
-    console.log('effect2')
-    console.warn(JSON.stringify(arr))
-    if(inputVal === 'error'){
-      error()
-    }
-  }, [arr, inputVal, error]);
-
-  return (
-    <div>
-      <div onClick={() => setIsInnerShown((val) => !val)}>TOGGLE INNER </div>
-      {isInnerShown && <h1>SECRET TEXT</h1>}
-    
-    </div>
-  );
+function ValidPassword({ isValid }) {
+  // passwords palyginti password ir paleisti validiate func jei passwordas  lygus
+  return isValid ? <p>Password valid!</p> : <p>Password not valid!</p>;
 }
 
+function PasswordMatches({ matches }) {
+  // passwords palyginti password ir paleisti validiate func jei passwordas  lygus
+  return matches ? <p>Password maches!</p> : <p>Password not matches!</p>;
+}
+
+
 export default function App() {
-  const [value, setValue] = useState("");
-  const [isShown, setIsShown] = useState(true /* constructor */);
-  const [val, setVal] = useState('');
-  console.log("render");
+  const [showPass, setShowPass] = useState(false);
+  const {
+    isValid,
+    matches,
+    password,
+    repeatPassword,
+    setPassword,
+    setRepeatPassword
+} = usePassword({
+  validationHandler: (pass)=> pass.length > 3,
+  initialPassword: 'ab'
+})
+
   return (
     <>
       <input
-        value={val}
-        onChange={(e) => setVal(e.target.value)}
-        type="text"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        type={showPass ? "text" : "password"}
       />
-      TIKRASIS CIA: 
+      <button onClick={() => setShowPass(!showPass)}>Toggle input type</button>
       <input
-
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={repeatPassword}
+        onChange={(e) => setRepeatPassword(e.target.value)}
         type="text"
       />
-      <div onClick={() => setIsShown(!isShown)}>OUTER TOGGLE</div>
-      <Comp inputVal={value} isShown={isShown} />
+      <ValidPassword isValid={isValid} />
+      {isValid && <PasswordMatches matches={matches} />}
     </>
   );
 }
