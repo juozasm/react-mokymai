@@ -1,10 +1,10 @@
 # React Programa
 
 ## TOOLS:
-[https://nodejs.org/en/](NODE JS)
-[https://code.visualstudio.com/](VSCode) 
-[https://codesandbox.io/](Code Sandbox)
-[https://reactjs.org/docs/create-a-new-react-app.html](CRA - Create React App)
+- [NODE JS](https://nodejs.org/en/)
+- [VSCode](https://code.visualstudio.com/) 
+- [Code Sandbox](https://codesandbox.io/)
+- [CRA - Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
 
 ## 2021 01 15
 
