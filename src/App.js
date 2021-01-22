@@ -1,38 +1,60 @@
-import React, { useState } from 'react'
+import React, { useCallback, useMemo, useState, useEffect } from "react";
+
+function Comp({ isShown, inputVal }) {
+  const [isInnerShown, setIsInnerShown] = useState(isShown /* constructor */);
+
+  const error = useCallback(function() {
+    console.error('ERROR!!!', { isInnerShown })
+  }, [isInnerShown])
+
+  const arr = useMemo(()=>{
+    console.log('compute')
+    return [inputVal, { isShown }]
+  }, [inputVal, isShown])
+
+  useEffect(() => {
+    console.log('effect1')
+    setIsInnerShown(isShown);
+  }, [isShown]);
+
+  useEffect(() => {
+    console.log('effect2')
+    console.warn(JSON.stringify(arr))
+    if(inputVal === 'error'){
+      error()
+    }
+  }, [arr, inputVal, error]);
+
+  return (
+    <div>
+      <div onClick={() => setIsInnerShown((val) => !val)}>TOGGLE INNER </div>
+      {isInnerShown && <h1>SECRET TEXT</h1>}
+    
+    </div>
+  );
+}
 
 export default function App() {
-  const texts = ['abc', 'ab', 'cd', 'aaa']
-  const [search, setSearch] = useState('')
-  const [colors, setColors] = useState({
-    backgroundColor: 'white',
-    color: 'green'
-  })
-  const [vh, setVh] = useState(100)
-
-  const handle = ()=>{
-    setVh(state => state / 2)
-    setVh(state => state / 2)
-  }
-  
-  // const [a, b] = [1, 2]
-  // const a = 1, const b = 2
-  // const { a, b } = { a: 2, c: undefined }
-  // a = 2 b = undefined
+  const [value, setValue] = useState("");
+  const [isShown, setIsShown] = useState(true /* constructor */);
+  const [val, setVal] = useState('');
+  console.log("render");
   return (
-    <div style={{
-      backgroundColor: colors.backgroundColor,
-      width: '100%',
-      height: `${vh}vh`,
-      color: colors.color
-    }}>
-      <button onClick={()=>setColors((state)=>({ 
-        ...state,
-        backgroundColor: 'red' }))}>CHANGE BG COLOR</button>
-      <p> ASD ASD ASD
-      </p>
-      <button onClick={handle}>HALF OF SIZE</button>
-      <input value={search} onChange={(e)=>setSearch(e.target.value)} type="text"/>
-      {texts.filter(text => text.includes(search)).map((val)=><p key={val}>{val}</p>)}
-    </div>
-  )
+    <>
+      <input
+        value={val}
+        onChange={(e) => setVal(e.target.value)}
+        type="text"
+      />
+      TIKRASIS CIA: 
+      <input
+
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        type="text"
+      />
+      <div onClick={() => setIsShown(!isShown)}>OUTER TOGGLE</div>
+      <Comp inputVal={value} isShown={isShown} />
+    </>
+  );
 }
