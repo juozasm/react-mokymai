@@ -32,6 +32,7 @@ Custom hooks pvz.: https://usehooks.com/
 // papildomi patternas -> Atomic design https://github.com/danilowoz/react-atomic-design pagal: https://bradfrost.com/blog/post/atomic-web-design/
 
 **Skaldyti skaldyti ir dar karta skaldyti!
+
 https://reactjs.org/docs/thinking-in-react.html
 
 - Routing - default router [https://reactrouter.com/web/guides/quick-start](react-router-dom)
