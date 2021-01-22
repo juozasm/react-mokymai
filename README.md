@@ -21,7 +21,7 @@ https://reactjs.org/docs/lists-and-keys.html
 - Memo https://codeburst.io/understanding-memoization-in-3-minutes-2e58daf33a19
 - Modern Javascript https://javascript.info/
 
-**SVARBIAUSIA SUPRASTI: State, Props, Jsx, map, filter - array funkcijas
+**SVARBIAUSIA SUPRASTI: State, Props, Jsx, map, filter - array funkcijas**
 
 ## 2021 01 22
 - MORE PRACTISE!
@@ -31,7 +31,7 @@ Custom hooks pvz.: https://usehooks.com/
 - Aplikacijos - DONT OVERTHINK - https://reactjs.org/docs/faq-structure.html 
 // papildomi patternas -> Atomic design https://github.com/danilowoz/react-atomic-design pagal: https://bradfrost.com/blog/post/atomic-web-design/
 
-**Skaldyti skaldyti ir dar karta skaldyti!
+**Skaldyti skaldyti ir dar karta skaldyti!**
 
 https://reactjs.org/docs/thinking-in-react.html
 
