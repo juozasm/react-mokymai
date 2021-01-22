@@ -24,7 +24,7 @@ https://reactjs.org/docs/lists-and-keys.html
 **SVARBIAUSIA SUPRASTI: State, Props, Jsx, map, filter - array funkcijas**
 
 ## 2021 01 22
-- MORE PRACTISE!
+- MORE PRACTICE
 - Lifecycle valdymas su useEffect ir kiti hooksai, custom hooks rasymas https://reactjs.org/docs/hooks-intro.html
 Custom hooks pvz.: https://usehooks.com/
 - componentDidCatch nera papkeiciamas hooksais
