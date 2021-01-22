@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# React Programa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## TOOLS:
+- [NODE JS](https://nodejs.org/en/)
+- [VSCode](https://code.visualstudio.com/) 
+- [Code Sandbox](https://codesandbox.io/)
+- [CRA - Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
 
-## Available Scripts
+## 2021 01 15
 
-In the project directory, you can run:
+- Supažindinimas su React 
+- Oficiali dokumentacija [DOCS](https://reactjs.org/docs/getting-started.html)
+- JSX - https://reactjs.org/docs/introducing-jsx.html   
+https://reactjs.org/docs/rendering-elements.html
 
-### `npm start`
+- Komponentai ir Propsai https://reactjs.org/docs/components-and-props.html
+- State valdymas ir gyvavimo ciklai lifecycles, PureComponent, shouldComponentUpdate, componentDdidMount, componentDidUpdate. componentWillUnmount, constructor https://reactjs.org/docs/state-and-lifecycle.html CLASS BASED
+su React hook funkciniu komponentu: https://reactjs.org/docs/hooks-state.html
+- Conditional rendering Lists and keys - >
+https://reactjs.org/docs/conditional-rendering.html
+https://reactjs.org/docs/lists-and-keys.html
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Bonus: 
 
-### `npm test`
+- Funkcinis progravimo pavyzdziai: https://github.com/js-functional/js-funcional
+- Memo https://codeburst.io/understanding-memoization-in-3-minutes-2e58daf33a19
+- Modern Javascript https://javascript.info/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**SVARBIAUSIA SUPRASTI: State, Props, Jsx, map, filter - array funkcijas**
 
-### `npm run build`
+## 2021 01 22
+- MORE PRACTICE
+- Lifecycle valdymas su useEffect ir kiti hooksai, custom hooks rasymas https://reactjs.org/docs/hooks-intro.html
+Custom hooks pvz.: https://usehooks.com/
+- componentDidCatch nera papkeiciamas hooksais
+- Aplikacijos - DONT OVERTHINK - https://reactjs.org/docs/faq-structure.html 
+// papildomi patternas -> Atomic design https://github.com/danilowoz/react-atomic-design pagal: https://bradfrost.com/blog/post/atomic-web-design/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [COUNTDOWN - setInterval - useEffect example](https://github.com/juozasm/react-mokymai/blob/master/Countdown.js)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Skaldyti skaldyti ir dar karta skaldyti!**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://reactjs.org/docs/thinking-in-react.html
 
-### `npm run eject`
+- Routing - default router [https://reactrouter.com/web/guides/quick-start](react-router-dom)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+--- OUT OF SCOPE
+- HOC Pattern, render function patteRN
+- Global state
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
