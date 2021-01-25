@@ -6,7 +6,7 @@ import React from 'react'
 //  <p>abc</p>
 // </div>
 
-// UPDATE: This is also valid, but must be set as UPPERCASE var
+// UPDATE: This is also valid, but must be set as UPPERCASE var (CustomTag)
 /* 
     const CustomTag = `h${this.props.priority}`;
     <CustomTag>Hello</CustomTag>
