@@ -46,15 +46,16 @@ Custom hooks pvz.: https://usehooks.com/
 https://reactjs.org/docs/thinking-in-react.html
 
 ## 2021 01 29
-
+- Setup json server - https://github.com/typicode/json-server - for fake data + auth
 - Refs - https://reactjs.org/docs/refs-and-the-dom.html
+- Try inputs without state
+- Connect with axios 
 - Routing - default router [https://reactrouter.com/web/guides/quick-start](react-router-dom)
-- HOC Pattern - https://reactjs.org/docs/higher-order-components.html
-- Render function pattern - https://reactjs.org/docs/render-props.html
-- Portals - https://reactjs.org/docs/portals.html
+- Try Auth / public routes
 
 --- OUT OF SCOPE
-
+- HOC Pattern - https://reactjs.org/docs/higher-order-components.html
 - Global state
-
+- Render function pattern - https://reactjs.org/docs/render-props.html
+- Portals - https://reactjs.org/docs/portals.html
 
