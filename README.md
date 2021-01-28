@@ -1,5 +1,7 @@
 # React Programa
 
+FAKE APIS: https://apilist.fun/
+
 ## TOOLS:
 - [NODE JS](https://nodejs.org/en/)
 - [VSCode](https://code.visualstudio.com/) 
@@ -43,10 +45,16 @@ Custom hooks pvz.: https://usehooks.com/
 
 https://reactjs.org/docs/thinking-in-react.html
 
+## 2021 01 29
+
+- Refs - https://reactjs.org/docs/refs-and-the-dom.html
 - Routing - default router [https://reactrouter.com/web/guides/quick-start](react-router-dom)
+- HOC Pattern - https://reactjs.org/docs/higher-order-components.html
+- Render function pattern - https://reactjs.org/docs/render-props.html
+- Portals - https://reactjs.org/docs/portals.html
 
 --- OUT OF SCOPE
-- HOC Pattern, render function patteRN
+
 - Global state
 
 
