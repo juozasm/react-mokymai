@@ -1,10 +1,15 @@
-import ErrorBoundary from './containers/ErrorBoundaries'
-import IndexPage from './views/IndexPage'
+import axios from 'axios'
+import { useEffect } from 'react'
+
+const headers = {
+  'Content-Type': 'application/json',
+}
 
 export default function App() {
-    return (
-      <ErrorBoundary>      
-        <IndexPage/>
-      </ErrorBoundary>
-    )
+    // useEffect(()=>{
+    //   axios.post('http://localhost:4000/auth/register', 
+    //   { email: 'xyz@gmail.com', password: 'xyz'}, { headers })
+    // }, [])
+
+    return null
 }
