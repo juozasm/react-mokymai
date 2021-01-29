@@ -1,8 +1,8 @@
 import React from 'react'
 import useRegister  from '../hooks/useRegister'
 
-export default function Register() {
-    const { inputs, handleInput, handleSubmit } = useRegister()
+export default function Register({ onSuccessRegister }) {
+    const { inputs, handleInput, handleSubmit } = useRegister(onSuccessRegister)
     return (
         <div>
             <form onSubmit={handleSubmit}>

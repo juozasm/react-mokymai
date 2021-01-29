@@ -1,15 +1,14 @@
 import { useContext, useState } from "react";
-import { register } from "../utils/api";
+import { login } from "../utils/api";
 import { useHistory } from 'react-router-dom'
 import { TokenContext } from "../components/TokenProvider";
 
-export default function useRegister(onError = (error)=> console.log(error)) {
+export default function useLogin(onError = (error)=> console.log(error)) {
     const [, setToken] = useContext(TokenContext)
     const history = useHistory();
     const [inputs, setInputs] = useState({
         email: '',
         password: '',
-        repeatedPassword: ''
     })
 
     const handleInput = (e) => setInputs(state => ({
@@ -19,12 +18,11 @@ export default function useRegister(onError = (error)=> console.log(error)) {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        if(inputs.password !== inputs.repeatedPassword) return;
         try {
-            const response  = await register(inputs.email, inputs.password)
-            if(response?.data?.access_token){
-                sessionStorage.setItem('access_token', response.data.access_token)
-                setToken(response.data.access_token)
+            const data  = await login(inputs.email, inputs.password)
+            if(data.access_token){
+                sessionStorage.setItem('access_token', data.access_token)
+                setToken(data.access_token)
                 history.push('/')
             } else {
                 throw(new Error('Token does not exist!'))

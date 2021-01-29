@@ -1,35 +1,39 @@
-import { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
-  Link
 } from "react-router-dom";
+import TokenProvider, { TokenContext } from "./components/TokenProvider";
 import AuthRoute from "./routes/AuthRoute";
 import Index from './routes/Index';
 import Login from './routes/Login';
 import Register from './routes/Register';
 
 export default function App() {
-
-  const [token, setToken] = useState(null)
-  
-    return <Router>
+    return (
+    <TokenProvider>
+    <Router>
       <Switch>
         <Route exact  path="/register">
           <Register/>
         </Route>
-        <Route exact path="/login">
+        {/* todo: Padaryti login tik neprisijungusiems */}
+        <Route path="/login">
           <Login/>
         </Route>
-        <AuthRoute isAuthorized={token !== null} exact path="/">
-          <Index/>
-        </AuthRoute>
+        <TokenContext.Consumer>
+            {([token])=> (
+              <AuthRoute isAuthorized={token} exact path="/">
+                <Index token={token}/>
+              </AuthRoute>
+          )}
+        </TokenContext.Consumer>
         <Route exact path="*">
           <div>404</div>
         </Route>
       </Switch>
     </Router>
+    </TokenProvider>
+    )
 }
 
