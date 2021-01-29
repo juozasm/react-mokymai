@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from "react";
 
 function getTime(state) {
-  if (state.seconds === 60) {
-    const { minutes, hours } = state;
-    const newSeconds = 0;
-    const newMinutes = minutes + 1 === 60 ? 0 : minutes + 1;
-    const newHours =
-      minutes + 1 === 60 ? (hours + 1 >= 24 ? 0 : hours + 1) : hours;
+  const { minutes, hours } = state;
+  const newSeconds = 0;
+  const newMinutes = minutes + 1 === 60 ? 0 : minutes + 1;
+  const newHours =
+    minutes + 1 === 60 ? (hours + 1 >= 24 ? 0 : hours + 1) : hours;
 
-    return { seconds: newSeconds, minutes: newMinutes, hours: newHours };
-  }
-
-  return state;
+  return { seconds: newSeconds, minutes: newMinutes, hours: newHours };
 }
 
 export default function YMS() {
   const [clockState, setClockState] = useState({
-    seconds: 58,
-    minutes: 58,
-    hours: 2
+    seconds: 0,
+    minutes: 0,
+    hours: 0
   });
   const [intervalId, setIntervalId] = useState(null);
 
@@ -33,9 +29,9 @@ export default function YMS() {
   }, []);
 
   useEffect(() => {
-    console.log("test");
-
-    setClockState(getTime);
+    if (clockState.seconds === 60) {
+      setClockState(getTime);
+    }
   }, [intervalId, clockState]);
 
   useEffect(() => {
