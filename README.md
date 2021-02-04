@@ -52,10 +52,25 @@ https://reactjs.org/docs/thinking-in-react.html
 - Connect with axios 
 - Routing - default router [https://reactrouter.com/web/guides/quick-start](react-router-dom)
 - Try Auth / public routes
+- Global state - React Context https://reactjs.org/docs/context.html
 
---- OUT OF SCOPE
-- HOC Pattern - https://reactjs.org/docs/higher-order-components.html
-- Global state
-- Render function pattern - https://reactjs.org/docs/render-props.html
+## 2021 02 05
+
+- Styling react app:
+Styling solutions: 
+Nr 1. [https://styled-components.com/](Styled components) Most HOT/HIPSTA approach: [https://dev.to/devsmranjan/styling-react-components-styled-components-twin-macro-tailwind-css-2-0-3cnk](Styled Components + Tailwind with Babel macro and other s**t)
+Nr 2. [https://github.com/css-modules/css-modules](CSS/SASS Modules)
+
+Other mentions: Tailwind, Pure CSS, Inline Styles
+
+What is theming and how to achieve? - Context api vs CSS vars?
+
+*Lets do a modal*
+
 - Portals - https://reactjs.org/docs/portals.html
 
+--- OUT OF SCOPE
+- Global state PART 2 - Redux
+- HOC Pattern - https://reactjs.org/docs/higher-order-components.html
+- Render function pattern - https://reactjs.org/docs/render-props.html
+- Bonus webpack config starter
