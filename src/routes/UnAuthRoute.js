@@ -4,9 +4,10 @@ import { TokenContext } from '../components/TokenProvider'
 
 export default function AuthRoute({ path, ...otherProps }) {
     const [token] = useContext(TokenContext)
-    if(!token){
-        return ( <Route path={path}>
-            <Redirect from={path} to="/login" />
+    if(token){
+        return ( 
+        <Route exact path={path}>
+            <Redirect from={path} to="/" />
         </Route>)
     }
     return (
