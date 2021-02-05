@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, Redirect } from 'react-router-dom'
-import ShowToken from '../components/ShowToken'
-import useProducts from '../hooks/useProducts'
+import Modal from '../../components/Modal'
+import ShowToken from '../../components/ShowToken'
+import useProducts from '../../hooks/useProducts'
+import { H1 } from '../../styled/texts'
+import * as S from './styled'
 
 export default function Index() {
+
+    const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [modalIsOpen2, setModalIsOpen2] = useState(false)
 
     const {
         products,
@@ -14,8 +20,14 @@ export default function Index() {
     if(error) return <Redirect to={`/error/404/${error}`}/>
 
     return (
-        <div>
-            <h1>Home page</h1>
+        <S.Container fluid>
+            <H1>Home page</H1>
+            <button onClick={()=>{
+                setModalIsOpen(true)
+                setModalIsOpen2(true)
+            }}>OPEN MODAL</button>
+            <Modal text="PIRMAS" onClose={()=>setModalIsOpen(false)} isOpen={modalIsOpen}/>
+            <Modal text="ANTRAS" onClose={()=>setModalIsOpen2(false)} isOpen={modalIsOpen2}/>
             <ShowToken/>
             <Link to="/logout">Logout</Link>
             { isLoading ? <p>Loading...</p> : <div>
@@ -32,6 +44,7 @@ export default function Index() {
                     }
                 </ul>
             </div>}
-        </div>
+       
+        </S.Container>
     )
 }

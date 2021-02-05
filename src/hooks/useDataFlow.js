@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, useCallback } from 'react'
 import { TokenContext } from '../components/TokenProvider'
 import useIsMounted from './useIsMounted'
 
@@ -10,6 +10,13 @@ export default function useDataFlow() {
 
     const mounted = useIsMounted()
 
+    const resetToken = useCallback(()=>{
+        mounted.current && setToken(null)
+            sessionStorage.removeItem(
+                'access_token'
+            )
+    }, [mounted, setToken])
+
     return {
         data,
         setData,
@@ -18,12 +25,6 @@ export default function useDataFlow() {
         error,
         setError,
         token,
-        resetToken: ()=> {
-            mounted.current && setToken(null)
-            sessionStorage.removeItem(
-                'access_token'
-            )
-        }
+        resetToken
     }
-    
 }

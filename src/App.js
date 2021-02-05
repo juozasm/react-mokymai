@@ -7,7 +7,7 @@ import {
 import TokenProvider from "./components/TokenProvider";
 import AuthRoute from "./components/AuthRoute";
 import UnAuthRoute from "./components/UnAuthRoute";
-import Index from './routes/Index';
+import Home from './routes/Home';
 import Login from './routes/Login';
 import Register from './routes/Register';
 import Logout from "./routes/Logout";
@@ -29,7 +29,7 @@ export default function App() {
           <Login/>
         </UnAuthRoute>
         <AuthRoute exact path="/">
-          <Index/>
+          <Home />
         </AuthRoute>
         <AuthRoute exact path="/products/:productId">
           <Product/>
