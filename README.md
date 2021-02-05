@@ -59,7 +59,7 @@ https://reactjs.org/docs/thinking-in-react.html
 - Styling react app:
 Styling solutions: 
 Nr 1. [Styled components](https://styled-components.com) Most HOT/HIPSTA approach: [Styled Components + Tailwind with Babel macro and other s**t](https://dev.to/devsmranjan/styling-react-components-styled-components-twin-macro-tailwind-css-2-0-3cnk)
-Nr 2. [SASS Modules](https://github.com/css-modules/css-modules])
+Nr 2. [SASS Modules](https://github.com/css-modules/css-modules)
 
 Other mentions: Tailwind, Pure CSS, Inline Styles
 
