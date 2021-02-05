@@ -1,26 +1,24 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React from 'react'
+import { Link, Redirect } from 'react-router-dom'
 import ShowToken from '../components/ShowToken'
-import { TokenContext } from '../components/TokenProvider'
-import { getProducts } from '../utils/api'
+import useProducts from '../hooks/useProducts'
 
 export default function Index() {
 
-    const [products, setProducts] = useState([])
-    const [token] = useContext(TokenContext)
+    const {
+        products,
+        error,
+        isLoading
+    } = useProducts()
 
-    useEffect(() => {
-        let mounted = true
-        getProducts(token).then((products)=>mounted && products && setProducts(products))
-        return () => {
-            mounted = false
-        }
-    }, [token])
+    if(error) return <Redirect to={`/error/404/${error}`}/>
 
     return (
         <div>
             <h1>Home page</h1>
             <ShowToken/>
-            <div>
+            <Link to="/logout">Logout</Link>
+            { isLoading ? <p>Loading...</p> : <div>
                 <p>Products</p>
                 <ul>
                     {products.map(({
@@ -28,12 +26,12 @@ export default function Index() {
                         description,
                         id
                     })=>(<li key={id}>
-                        <h3>{name}</h3>
+                        <h3><Link to={`/products/${id}`}>{name}</Link></h3>
                         <p>{description}</p>
                     </li>))
                     }
                 </ul>
-            </div>
+            </div>}
         </div>
     )
 }

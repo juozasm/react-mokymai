@@ -1,4 +1,6 @@
 import axios from 'axios'
+import Error from '../routes/Error'
+import handleTokenValidity from './handleTokenValidity'
 
 const headers = {
     'Content-Type': 'application/json',
@@ -21,6 +23,17 @@ async function handleResponse(fetchApi, ...args) {
     }
 }
 
+function handleResponseWithToken(token, resetToken) {
+    const isValid = handleTokenValidity(token)
+    if(!isValid){
+        return ()=> {
+            resetToken()
+            return Promise.reject('Token expired!')
+        }
+    }
+    return handleResponse
+}
+
 export function register(email, password) {
     return axios.post(base + '/auth/register', {
         email,
@@ -39,8 +52,15 @@ export function login(email, password) {
     }) 
 }
 
-export function getProducts(token) {
-    return handleResponse(axios.get, base + '/products', {
+export function getProducts([token, resetToken]) {
+    return handleResponseWithToken(token, resetToken)(axios.get, base + '/products', {
         headers: getHeaderWithToken(token)
     })
 }
+
+export function getProduct([token, resetToken], id) {
+    return handleResponseWithToken(token, resetToken)(axios.get, base + `/products/${id}`, {
+        headers: getHeaderWithToken(token)
+    })
+}
+

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Redirect, Route } from 'react-router-dom'
-import { TokenContext } from '../components/TokenProvider'
+import { TokenContext } from './TokenProvider'
 
 export default function AuthRoute({ path, ...otherProps }) {
     const [token] = useContext(TokenContext)
@@ -11,6 +11,7 @@ export default function AuthRoute({ path, ...otherProps }) {
         </Route>)
     }
     return (
-        <Route path={path} {...otherProps} />
+        <Route path={path} {...otherProps} >
+        </Route>
     )
 }

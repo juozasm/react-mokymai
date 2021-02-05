@@ -20,7 +20,7 @@ export default function useLogin(onError = (error)=> console.log(error)) {
         e.preventDefault()
         try {
             const data  = await login(inputs.email, inputs.password)
-            if(data.access_token){
+            if(data?.access_token){
                 sessionStorage.setItem('access_token', data.access_token)
                 setToken(data.access_token)
                 history.push('/')
