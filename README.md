@@ -67,6 +67,8 @@ What is theming and how to achieve? - Context api vs CSS vars?
 
 *Lets do a modal*
 
+- PropTypes - https://reactjs.org/docs/typechecking-with-proptypes.html
+
 - Portals - https://reactjs.org/docs/portals.html
 
 --- OUT OF SCOPE
