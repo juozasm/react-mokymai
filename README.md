@@ -80,6 +80,8 @@ React redux connection - https://react-redux.js.org/
 
 Immer for immutable mutations - https://immerjs.github.io/immer/docs/introduction
 
+Raw middleware boilerplate:https://github.com/juozasm/locatory/blob/master/src/store/index.js
+
 --- OUT OF SCOPE
 
 Here on youre own:
