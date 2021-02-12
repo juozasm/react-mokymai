@@ -10,6 +10,7 @@ export default function Index() {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
     const [modalIsOpen2, setModalIsOpen2] = useState(false)
+    const [bgColor, setBgColor] = useState(null)
 
     const {
         products,
@@ -26,8 +27,8 @@ export default function Index() {
                 setModalIsOpen(true)
                 setModalIsOpen2(true)
             }}>OPEN MODAL</button>
-            <Modal text="PIRMAS" onClose={()=>setModalIsOpen(false)} isOpen={modalIsOpen}/>
-            <Modal text="ANTRAS" onClose={()=>setModalIsOpen2(false)} isOpen={modalIsOpen2}/>
+            <Modal text="PIRMAS"  bgColor={bgColor} setBgColor={()=>setBgColor('black')} onClose={()=>setModalIsOpen(false)} isOpen={modalIsOpen}/>
+            <Modal text="ANTRAS" bgColor={bgColor} setBgColor={(color)=>setBgColor(color)} onClose={()=>setModalIsOpen2(false)} isOpen={modalIsOpen2}/>
             <ShowToken/>
             <Link to="/logout">Logout</Link>
             { isLoading ? <p>Loading...</p> : <div>
