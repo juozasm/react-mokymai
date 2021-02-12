@@ -72,7 +72,7 @@ What is theming and how to achieve? - Context api vs CSS vars?
 - Portals - https://reactjs.org/docs/portals.html
 
 ## 2021 02 12
-
+- Compose and pipe:: https://medium.com/free-code-camp/pipe-and-compose-in-javascript-5b04004ac937
 - HOC Pattern - https://reactjs.org/docs/higher-order-components.html
 - Render function pattern - https://reactjs.org/docs/render-props.html
 - Global state PART 2 - Redux + Redux toolkit + Thunk middleware + dev tools
