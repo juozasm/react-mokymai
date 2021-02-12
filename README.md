@@ -71,8 +71,14 @@ What is theming and how to achieve? - Context api vs CSS vars?
 
 - Portals - https://reactjs.org/docs/portals.html
 
---- OUT OF SCOPE
-- Global state PART 2 - Redux
+## 2021 02 12
+- Compose and pipe:: https://medium.com/free-code-camp/pipe-and-compose-in-javascript-5b04004ac937
 - HOC Pattern - https://reactjs.org/docs/higher-order-components.html
 - Render function pattern - https://reactjs.org/docs/render-props.html
-- Bonus webpack config starter
+- Global state PART 2 - Redux + Redux toolkit + Thunk middleware + dev tools
+React redux connection - https://react-redux.js.org/
+
+--- OUT OF SCOPE
+
+Here on youre own:
+- Bonus webpack config starter: https://github.com/rwieruch/minimal-react-webpack-babel-setup
