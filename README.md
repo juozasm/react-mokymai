@@ -76,6 +76,7 @@ What is theming and how to achieve? - Context api vs CSS vars?
 - HOC Pattern - https://reactjs.org/docs/higher-order-components.html
 - Render function pattern - https://reactjs.org/docs/render-props.html
 - Global state PART 2 - Redux + Redux toolkit + Thunk middleware + dev tools
+React redux connection - https://react-redux.js.org/
 
 --- OUT OF SCOPE
 
