@@ -78,6 +78,8 @@ What is theming and how to achieve? - Context api vs CSS vars?
 - Global state PART 2 - Redux + Redux toolkit + Thunk middleware + dev tools
 React redux connection - https://react-redux.js.org/
 
+Immer for immutable mutations - https://immerjs.github.io/immer/docs/introduction
+
 --- OUT OF SCOPE
 
 Here on youre own:
