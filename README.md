@@ -82,6 +82,8 @@ Immer for immutable mutations - https://immerjs.github.io/immer/docs/introductio
 
 Raw middleware boilerplate:https://github.com/juozasm/locatory/blob/master/src/store/index.js
 
+ASync thunk middleware in action: https://github.com/juozasm/ba-react/blob/redux-async-middlewares/app/src/store/products/productsActions.js
+
 --- OUT OF SCOPE
 
 Here on youre own:
